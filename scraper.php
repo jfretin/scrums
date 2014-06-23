@@ -13,6 +13,7 @@ $dom = new simple_html_dom();
 $dom->load($html);
 
 $phoneLink = $dom->find("#phoneNumber a", 0);
+var_dump($phoneLink);
 if ($phoneLink->href != "") {
     $jsonImg = scraperwiki::scrape("http://www2.leboncoin.fr/ajapi/get/phone?list_id=675699535");
     if ($jsonImg != '""') {
